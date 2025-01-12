@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestionar Notes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+        }
+        .form-container, .notes-container {
+            margin-bottom: 30px;
+        }
+        .error {
+            color: red;
+            margin-bottom: 10px;
+        }
+        .success {
+            color: green;
+            margin-bottom: 10px;
+        }
+        .note {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .note h3 {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Gestionar Notes</h1>
+
+    <div class="form-container">
+        <h2>Afegir una nova nota</h2>
+        <div id="messages"></div>
+
+        <form method="POST" action="form.php">
+            <label for="titol">Títol:</label><br>
+            <input type="text" id="titol" name="titol" required><br><br>
+
+            <label for="descripcio">Descripció:</label><br>
+            <textarea id="descripcio" name="descripcio" rows="4" cols="50" required></textarea><br><br>
+
+            <button type="submit">Afegir Nota</button>
+        </form>
+    </div>
+
+    <div class="notes-container">
+        <h2>Llista de Notes</h2>
+        <div id="notes">
+            <!-- Aquí se insertarán las notas desde PHP -->
+        </div>
+    </div>
+</body>
+</html>
