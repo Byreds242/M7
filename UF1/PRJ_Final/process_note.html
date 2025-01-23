@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Nota</title>
+</head>
+<body>
+    <h2>Agregar Nueva Nota</h2>
+    <form action="process_note.php" method="POST">
+        <label for="titol">Título:</label>
+        <input type="text" id="titol" name="titol" required><br>
+        
+        <label for="descripcio">Descripción:</label>
+        <textarea id="descripcio" name="descripcio" required></textarea><br>
+        
+        <input type="submit" value="Agregar Nota">
+    </form>
+</body>
+</html>
